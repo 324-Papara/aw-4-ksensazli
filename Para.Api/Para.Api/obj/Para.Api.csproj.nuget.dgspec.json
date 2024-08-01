@@ -89,6 +89,10 @@
               "target": "Package",
               "version": "[7.0.17, )"
             },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.IO.RecyclableMemoryStream": {
               "target": "Package",
               "version": "[3.0.1, )"
