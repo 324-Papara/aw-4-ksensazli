@@ -71,6 +71,11 @@ public class Startup
 
         services.AddScoped<ITokenService, TokenService>();
         services.AddSingleton<INotificationService, NotificationService>();
+        services.AddSingleton<IRabbitMQClient, RabbitMQClient>();
+        services.AddSingleton<IEmailSender, EmailSender>();
+        services.AddHostedService<EmailQueueListener>();
+
+        services.Configure<RabbitMQConfig>(Configuration.GetSection("RabbitMQ"));
 
         services.AddAuthentication(x =>
         {
