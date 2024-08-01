@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8WbNWJHaCFBb+n1agRXF5PKNoVTSjDC/I6KbASWV7dSbHcnAigrfOHtDPRespAV3PyZPjWuD9R15+Xua+b8ejA==",
+  "dgSpecHash": "xT5kghgaRJzWyuOX/hAhPz6AlNCYrgLqL1D5sv5TVR+FT03YKTgC7OBOFspqfJz2UOl/PFssVob6WZ0Y+8isxw==",
   "success": true,
   "projectFilePath": "/Users/ksensazli/VS Code Projects/aw-4-ksensazli/Para.Api/Para.Api/Para.Api.csproj",
   "expectedPackageFiles": [
@@ -157,6 +157,7 @@
     "/Users/ksensazli/.nuget/packages/nuget.protocol/6.9.1/nuget.protocol.6.9.1.nupkg.sha512",
     "/Users/ksensazli/.nuget/packages/nuget.versioning/6.9.1/nuget.versioning.6.9.1.nupkg.sha512",
     "/Users/ksensazli/.nuget/packages/pipelines.sockets.unofficial/2.2.0/pipelines.sockets.unofficial.2.2.0.nupkg.sha512",
+    "/Users/ksensazli/.nuget/packages/rabbitmq.client/6.8.1/rabbitmq.client.6.8.1.nupkg.sha512",
     "/Users/ksensazli/.nuget/packages/runtime.native.system.data.sqlclient.sni/4.7.0/runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "/Users/ksensazli/.nuget/packages/runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/ksensazli/.nuget/packages/runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -198,7 +199,7 @@
     "/Users/ksensazli/.nuget/packages/system.io.filesystem.accesscontrol/5.0.0/system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
     "/Users/ksensazli/.nuget/packages/system.io.filesystem.primitives/4.0.1/system.io.filesystem.primitives.4.0.1.nupkg.sha512",
     "/Users/ksensazli/.nuget/packages/system.io.pipelines/7.0.0/system.io.pipelines.7.0.0.nupkg.sha512",
-    "/Users/ksensazli/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
+    "/Users/ksensazli/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
     "/Users/ksensazli/.nuget/packages/system.memory.data/1.0.2/system.memory.data.1.0.2.nupkg.sha512",
     "/Users/ksensazli/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/ksensazli/.nuget/packages/system.reflection/4.1.0/system.reflection.4.1.0.nupkg.sha512",

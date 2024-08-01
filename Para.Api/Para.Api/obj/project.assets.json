@@ -2587,6 +2587,23 @@
           }
         }
       },
+      "RabbitMQ.Client/6.8.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Threading.Channels": "7.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -3286,7 +3303,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Memory/4.5.4": {
+      "System.Memory/4.5.5": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.1/_._": {}
@@ -8500,6 +8517,23 @@
         "pipelines.sockets.unofficial.nuspec"
       ]
     },
+    "RabbitMQ.Client/6.8.1": {
+      "sha512": "jNsmGgmCNw2S/NzskeN2ijtGywtH4Sk/G6jWUTD5sY9SrC27Xz6BsLIiB8hdsfjeyWCa4j4GvCIGkpE8wrjU1Q==",
+      "type": "package",
+      "path": "rabbitmq.client/6.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net462/RabbitMQ.Client.dll",
+        "lib/net462/RabbitMQ.Client.xml",
+        "lib/netstandard2.0/RabbitMQ.Client.dll",
+        "lib/netstandard2.0/RabbitMQ.Client.xml",
+        "rabbitmq.client.6.8.1.nupkg.sha512",
+        "rabbitmq.client.nuspec"
+      ]
+    },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "sha512": "9kyFSIdN3T0qjDQ2R0HRXYIhS3l5psBzQi6qqhdLz+SzFyEy4sVxNOke+yyYv8Cu8rPER12c3RDjLT8wF3WBYQ==",
       "type": "package",
@@ -9719,10 +9753,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Memory/4.5.4": {
-      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+    "System.Memory/4.5.5": {
+      "sha512": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
       "type": "package",
-      "path": "system.memory/4.5.4",
+      "path": "system.memory/4.5.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -9736,7 +9770,7 @@
         "lib/netstandard2.0/System.Memory.dll",
         "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
-        "system.memory.4.5.4.nupkg.sha512",
+        "system.memory.4.5.5.nupkg.sha512",
         "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -11059,6 +11093,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Hangfire >= 1.8.14",
+      "Hangfire.AspNetCore >= 1.8.14",
       "Ltnm.Extensions.Logging.Core >= 3.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.7",
       "Microsoft.EntityFrameworkCore >= 8.0.7",
@@ -11073,6 +11109,7 @@
       "Para.Bussiness >= 1.0.0",
       "Para.Data >= 1.0.0",
       "Para.Schema >= 1.0.0",
+      "RabbitMQ.Client >= 6.8.1",
       "Serilog.AspNetCore >= 8.0.2",
       "Serilog.Sinks.File >= 6.0.0",
       "Swashbuckle.AspNetCore >= 6.7.0"
@@ -11128,6 +11165,14 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Hangfire": {
+            "target": "Package",
+            "version": "[1.8.14, )"
+          },
+          "Hangfire.AspNetCore": {
+            "target": "Package",
+            "version": "[1.8.14, )"
+          },
           "Ltnm.Extensions.Logging.Core": {
             "target": "Package",
             "version": "[3.0.0, )"
@@ -11169,6 +11214,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[8.0.4, )"
+          },
+          "RabbitMQ.Client": {
+            "target": "Package",
+            "version": "[6.8.1, )"
           },
           "Serilog.AspNetCore": {
             "target": "Package",
