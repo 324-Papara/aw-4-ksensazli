@@ -12,7 +12,6 @@ using Microsoft.OpenApi.Models;
 using Para.Api.Middleware;
 using Para.Api.Service;
 using Para.Base;
-using Para.Base.Log;
 using Para.Base.Token;
 using Para.Bussiness;
 using Para.Bussiness.Cqrs;
@@ -161,7 +160,7 @@ public class Startup
 
         app.UseMiddleware<HeartbeatMiddleware>();
         app.UseMiddleware<ErrorHandlerMiddleware>();
-        Action<RequestProfilerModel> requestResponseHandler = requestProfilerModel =>
+        Action<RequestResponseLoggingMiddleware.RequestProfilerModel> requestResponseHandler = requestProfilerModel =>
         {
             Log.Information("-------------Request-Begin------------");
             Log.Information(requestProfilerModel.Request);

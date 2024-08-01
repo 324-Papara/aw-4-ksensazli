@@ -1,5 +1,4 @@
 using Microsoft.IO;
-using Para.Base.Log;
 using Serilog;
 
 namespace Para.Api.Middleware;
@@ -8,9 +7,9 @@ public class RequestLoggingMiddleware
 {
     private readonly RequestDelegate next;
     private readonly RecyclableMemoryStreamManager recyclableMemoryStreamManager;
-    private readonly Action<RequestProfilerModel> requestResponseHandler;
+    private readonly Action<RequestResponseLoggingMiddleware.RequestProfilerModel> requestResponseHandler;
     private const int ReadChunkBufferLength = 4096;
-    public RequestLoggingMiddleware(RequestDelegate next,Action<RequestProfilerModel> requestResponseHandler)
+    public RequestLoggingMiddleware(RequestDelegate next,Action<RequestResponseLoggingMiddleware.RequestProfilerModel> requestResponseHandler)
     {
         this.next = next;
         this.requestResponseHandler = requestResponseHandler;
@@ -21,9 +20,9 @@ public class RequestLoggingMiddleware
     {
         Log.Information("LogRequestLoggingMiddleware.Invoke");
 
-        var model = new RequestProfilerModel
+        var model = new RequestResponseLoggingMiddleware.RequestProfilerModel
         {
-            RequestTime = new DateTimeOffset(),
+            RequestTime = new DateTime(),
             Context = context,
             Request = await FormatRequest(context)
         };
@@ -41,7 +40,7 @@ public class RequestLoggingMiddleware
 
             newResponseBody.Seek(0, SeekOrigin.Begin);
             model.Response = FormatResponse(context, newResponseBody);
-            model.ResponseTime = new DateTimeOffset();
+            model.ResponseTime = new DateTime();
             requestResponseHandler(model);
         }    
     }
